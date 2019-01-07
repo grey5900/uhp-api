@@ -1,0 +1,34 @@
+/**
+ * Override Bootstrap styles that you can't modify via variables here.
+ *
+ */
+
+.navbar-brand {
+  position: relative;
+  padding-left: 50px;
+}
+
+.navbar-default .navbar-nav > .active > a,
+.navbar-default .navbar-nav > .active > a:hover,
+.navbar-default .navbar-nav > .active > a:focus {
+  color: #33e0ff;
+  background-color: transparent;
+}
+
+@import "./app.scss";
+@import "~rc-tabs/assets/index";
+
+@import "~react-s-alert/dist/s-alert-default";
+@import "~react-s-alert/dist/s-alert-css-effects/scale";
+
+@import "~react-ui-tree/dist/react-ui-tree.css";
+@import "~pace-progress/templates/pace-theme-minimal.tmpl.css";
+@import "~pace-progress/themes/red/pace-theme-minimal.css";
+@import "~dropzone/dist/min/dropzone.min.css";
+@import "~react-dropzone-component/styles/filepicker.css";
+@import "~react-tagsinput/react-tagsinput.css";
+
+@import '~sweetalert/dist/sweetalert.css';
+@import "../components/LoadingPage/style.scss";
+@import "./semantic-ui/semantic.min.css";
+@import "~react-datepicker/dist/react-datepicker.min.css";

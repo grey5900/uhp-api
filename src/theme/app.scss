@@ -1,0 +1,443 @@
+@import "mixins";
+
+body, input, textarea {
+  font-family: 'Hiragino Sans GB', 'Microsoft YaHei', 'Helvetica Neue', sans-serif, SimHei;
+  -webkit-font-smoothing: antialiased
+}
+
+html, .full-height, .loadedContent {
+  height: 100%;
+}
+
+a {
+  cursor: pointer;
+}
+
+body {
+  min-height: 100%;
+  min-width: 320px;
+  box-sizing: border-box;
+  position: relative;
+  overflow: hidden;
+  background-color: transparent;
+  color: #88939C;
+}
+
+body:before {
+  content: '';
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: #fff;
+}
+
+#content {
+  position: absolute;
+  width: 100%;
+  min-height: 100%;
+  height: 100%;
+  overflow: hidden;
+}
+
+.pull-right {
+  float: right !important;
+}
+
+// panel
+.uhs-content {
+  margin: 10px 30px 10px 30px;
+  height: calc(100% - 80px)
+}
+
+.panel {
+  height: 100%
+}
+
+.hidden {
+  display: none;
+}
+
+.panelHead {
+  height: 40px;
+  margin-bottom: 10px
+}
+
+.panelTitle {
+  font-size: 22px;
+  margin-top: 10px;
+  display: inline-block;
+  color: #222222
+}
+
+.panel-body {
+  height: calc(100% - 40px)
+}
+
+.toolbarRight {
+  float: right;
+  margin: 5px 0 15px 0
+}
+
+.toolbarLeft {
+  float: left;
+  margin: 5px 0 15px 0
+}
+
+.m-b-15 {
+  margin-bottom: 15px;
+}
+
+.content {
+  padding: 15px;
+  height: 100%;
+  width: 100%;
+  overflow: auto !important;
+}
+
+.uhs-panel {
+  height: calc(100% - 35px);
+}
+
+.uhs-panel-body {
+  height: calc(100% - 40px);
+}
+
+.uhs-hide-overflow {
+  overflow: hidden;
+}
+
+.toolbarHeader {
+  height: 40px;
+}
+
+.m-node {
+  .inner {
+    color: #9DA5B4;
+    font-size: 12px;
+  }
+
+  .node {
+    display: inline-block;
+    width: 100%;
+    padding: 4px 5px;
+
+    &.is-active {
+      background-color: #31363F;
+      color: #EEEEEE;
+    }
+  }
+}
+
+//for table
+
+tr:nth-child(even) {
+  background-color: rgb(242, 248, 246) !important;
+}
+
+td {
+  line-height: 30px !important;
+}
+
+.uhs-btn, .uhs-btn-delete {
+  @include vertical-center;
+  @include unselectable;
+  height: 22px;
+  display: inline-block;
+  text-align: center;
+  background-color: #00D0BD;
+  color: white;
+  border-radius: 2px;
+  padding-bottom: 4px;
+  padding-top: 4px;
+  text-decoration: none !important;
+}
+
+.uhs-btn-delete {
+  background-color: #FFD602;
+}
+
+.uhs-btn-success {
+  background-color: #8CC800 !important;
+}
+
+.uhs-btn-back {
+  background-color: #ababab !important;
+}
+
+.uhs-btn-warning {
+  background-color: #FF324D !important;
+}
+
+.uhs-text-success {
+  color: #8CC800;
+}
+
+.uhs-text-href {
+  color: #8CC800;
+  text-decoration: underline;
+  cursor: pointer;
+}
+
+//for navbar
+.dropdown-toggle {
+  border: none !important;
+}
+
+// for sidebar
+li.divider {
+  background-color: #232730;
+  height: 1px;
+}
+
+li.active {
+  a, a:hover, a:focus {
+    background-color: #00D5C9;
+    color: white;
+    border: none;
+  }
+  .control-icon [stroke] {
+    stroke: white;
+  }
+}
+
+.m-t-15 {
+  margin-top: 15px;
+}
+
+.m-b-15 {
+  margin-bottom: 15px;
+}
+
+.m-r-10 {
+  margin-right: 10px;
+}
+
+.b-t {
+  border-top: 1px solid rgba(230, 230, 230, 0.7);
+}
+
+.b-r {
+  border-right: 1px solid rgba(230, 230, 230, 0.7);
+}
+
+.p-r-0 {
+  padding-right: 0;
+}
+
+.rc-tabs-content {
+  height: calc(100% - 38px);
+}
+
+.rc-tabs-tabpane {
+  height: 100%;
+}
+
+.rc-tabs-top {
+  border-bottom: none !important;
+}
+
+.check-box__label {
+  @include unselectable;
+}
+
+.prefixCls {
+  height: calc(100% - 10px);
+}
+
+.uhs-full-width {
+  width: 100%;
+}
+
+.black {
+  color: black;
+}
+
+.text-center {
+  text-align: center;
+}
+
+.text-red {
+  color: #DB2828;
+}
+
+// context menu
+.react-context-menu {
+  background: #EDEDED;
+  opacity: 0.95;
+  padding-left: 6px;
+  min-width: 100px;
+  border-radius: 4px;
+}
+
+.react-context-menu-item {
+  margin: 4px 0 4px 0;
+}
+
+.react-context-menu-link {
+  text-decoration: none;
+}
+
+.react-tagsinput-input {
+  width: 90px !important;
+  border: none !important;
+}
+
+.react-datepicker__input-container {
+  left: -4px;
+  position: relative;
+  width: 100%;
+  input {
+    width: 100% !important;
+    padding-left: 38px !important;
+  }
+  input[type=text]:focus {
+    border: 1px solid rgba(34, 36, 38, .15) !important;
+  }
+}
+
+.ui.required {
+  color: #DB2828;
+}
+
+.ui.labeled.input:not([class*="corner labeled"]) .label:first-child {
+  z-index: 9;
+}
+
+.ui.labeled {
+  .ui.fluid.dropdown {
+    margin-left: -4px;
+  }
+}
+
+.ui.pagination.menu {
+  border: 0;
+  box-shadow: none;
+  border-radius: 0;
+  .item {
+    min-width: initial;
+    margin: 0.625em 0.1875em;
+    padding: 0.1875em 0.625em;
+    &:before {
+      width: 0;
+    }
+  }
+}
+
+.pagination {
+  margin-left: 0;
+  margin-bottom: 1rem;
+  a,
+  button {
+    color: #0a0a0a;
+  }
+  li {
+    font-size: 0.875rem;
+    margin-right: 0.0625rem;
+    display: none;
+    &:last-child,
+    &:first-child {
+      display: inline-block;
+    }
+  }
+  .current {
+    //padding: 0.1875rem 0.625rem;
+    background: #00D0BD;
+    color: #fff;
+    cursor: default;
+    a {
+      color: #fff;
+    }
+  }
+  .disabled {
+    padding: 0.1875rem 0.625rem;
+    color: #cacaca;
+    cursor: not-allowed;
+    &:hover {
+      background: transparent;
+    }
+  }
+  &::after {
+    clear: both;
+  }
+  &::before,
+  &::after {
+    content: ' ';
+    display: table;
+  }
+  .ellipsis::after {
+    content: '\2026';
+    padding: 0.1875rem 0.625rem;
+    color: #0a0a0a;
+  }
+}
+
+@media screen and (min-width: 40em) {
+  .pagination li {
+    display: inline-block;
+    font-size: 0.9rem;
+    padding: 0 10px;
+    margin-right: 0;
+    line-height: 30px;
+    border-radius: 2px;
+    text-align: center;
+  }
+}
+
+.ui.form .fields {
+  margin: 0 0 1em;
+}
+
+.clearfix {
+  &:before,
+  &:after {
+    content: " "; // 1
+    display: table; // 2
+  }
+  &:after {
+    clear: both;
+  }
+}
+
+.ui.button.active {
+  background-color: #1678c2;
+  color: white;
+}
+
+h5 {
+  font-size: 1rem;
+}
+
+h4 {
+  font-size: 1.25rem;
+}
+
+h3 {
+  font-size: 1.5rem;
+}
+
+h2 {
+  font-size: 1.75rem;
+}
+
+.waves-effect {
+  position: relative;
+  cursor: pointer;
+  display: inline-block;
+  overflow: hidden;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  -webkit-tap-highlight-color: transparent;
+  vertical-align: middle;
+  z-index: 1;
+  will-change: opacity, transform;
+  -webkit-transition: all .3s ease-out;
+  -moz-transition: all .3s ease-out;
+  -o-transition: all .3s ease-out;
+  -ms-transition: all .3s ease-out;
+  transition: all .3s ease-out;
+}
+
